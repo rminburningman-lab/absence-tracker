@@ -6,50 +6,53 @@
 
 ## 2. وضعیت فعلی
 
-- پایه‌ی پروژه با Expo + React Native + TypeScript راه‌اندازی شده است.
-- یک نسخه‌ی اولیه و شبیه‌سازی‌شده از طراحی اصلی در صفحه‌ی اصلی ساخته شده است.
-- تمرکز اولیه روی تجربه‌ی کاربری، زیبایی بصری و انتقال احساسی داده شده است.
+- [x] پایه‌ی پروژه با Expo + React Native + TypeScript راه‌اندازی شده است.
+- [x] یک نسخه‌ی اولیه‌ی قابل اجرا از Home screen با تایمر زنده و تجربه‌ی بصری لوکس ساخته شده است.
+- [x] navigation با tab bar و header حرفه‌ای پیاده‌سازی شده است.
+- [x] Journal screen به فرم واقعی و ذخیره‌ی محلی خاطره تبدیل شده است.
+- [x] طراحی سیستم پایه با components reusable و theme روشن/تاریک در حال اجرا است.
+- [x] storage abstraction برای داده‌های محلی آماده شده است.
 
 ## 3. اولویت‌های اصلی
 
-1. تبدیل prototype به محصول قابل‌استفاده
-2. پیاده‌سازی داده‌های محلی و پایدار
-3. ساخت تجربه‌ی اصلی: تایم‌لاین، ژورنال، counters و analytics
-4. افزودن امنیت و پشتیبان‌گیری
-5. آماده‌سازی برای نسخه‌ی اولیه (MVP)
+1. تبدیل prototype به محصول قابل‌استفاده و قابل‌اعتماد
+2. تکمیل ذخیره‌سازی و مدل داده‌ی journal
+3. غنی‌سازی تجربه‌ی اصلی: Home، Journal، Analytics
+4. افزودن امنیت، media support و پشتیبان‌گیری
+5. آماده‌سازی برای نسخه‌ی MVP و تست اولیه
 
-## 4. برنامه‌ی اجرایی (مرحله به مرحله)
+## 4. برنامه‌ی اجرایی (به‌روز شده)
 
 ### فاز A — تثبیت پایه و معماری
 
-- [ ] بررسی و نهایی‌کردن معماری پروژه
-- [ ] انتخاب ابزارهای داده و ذخیره‌سازی
-- [ ] تعریف ساختار پوشه‌ها و کامپوننت‌ها
-- [ ] تعریف system design برای theme، spacing، typography و motion
-- [ ] ایجاد base services برای زمان، تاریخ و تنظیمات کاربر
-- [ ] تعریف قرارداد داده برای entities اصلی
+- [x] بررسی و نهایی‌کردن معماری پروژه
+- [x] انتخاب ابزارهای داده و ذخیره‌سازی
+- [x] تعریف ساختار پوشه‌ها و کامپوننت‌ها
+- [x] تعریف system design برای theme، spacing، typography و motion
+- [x] ایجاد base services برای زمان، تاریخ و تنظیمات کاربر
+- [x] تعریف قرارداد داده برای entities اصلی
 
 ### فاز B — طراحی سیستم و تجربه کاربری
 
-- [ ] تکمیل طراحی سیستم (color palette، typography، motion، spacing)
-- [ ] ایجاد components قابل استفاده مجدد:
-  - [ ] Card
-  - [ ] SectionHeader
-  - [ ] TimelineItem
-  - [ ] MetricTile
-  - [ ] EmptyState
-  - [ ] Chip
-- [ ] اضافه‌کردن حالت‌های loading، empty و error
-- [ ] طراحی نسخه‌ی dark mode و light mode
+- [x] تکمیل طراحی سیستم (color palette، typography، motion، spacing)
+- [x] ایجاد components قابل استفاده مجدد:
+  - [x] Card
+  - [x] SectionHeader
+  - [x] MetricTile
+  - [x] EmptyState
+  - [x] Chip
+  - [x] Button / Input / Modal / ScreenContainer
+- [x] اضافه‌کردن حالت‌های empty و content-based layout
+- [x] طراحی نسخه‌ی dark mode و ساختار آماده برای light mode
 - [ ] تنظیم accessibility و reduced motion
 
 ### فاز C — پیاده‌سازی هسته‌ی محصول
 
-- [ ] ساخت صفحه‌ی Home با تایمر اصلی
-- [ ] اضافه‌کردن Time Perspectives cards
-- [ ] پیاده‌سازی Without… counters
-- [ ] ساخت بخش What Happened While Away
-- [ ] ساخت Seasonal Timeline
+- [x] ساخت صفحه‌ی Home با تایمر اصلی
+- [x] اضافه‌کردن Time Perspectives cards
+- [x] پیاده‌سازی Without… counters
+- [x] ساخت بخش What Happened While Away
+- [x] ساخت Seasonal Timeline
 - [ ] افزودن Monthly Progress
 - [ ] اضافه‌کردن Missed Events
 - [ ] پیاده‌سازی Emotional Statistics
@@ -57,8 +60,9 @@
 
 ### فاز D — ژورنال و حافظه
 
-- [ ] ساخت Memory Journal
-- [ ] افزودن امکان ثبت متن، mood، weather، location و tags
+- [x] ساخت Memory Journal
+- [x] افزودن امکان ثبت متن، mood و reflection
+- [ ] افزودن weather، location و tags
 - [ ] اجازه‌ی افزودن عکس، ویدیو و voice note
 - [ ] نمایش ورودی‌ها روی تایم‌لاین
 - [ ] اتصال هر ورودی به روز خاص
@@ -75,7 +79,7 @@
 
 ### فاز F — امنیت و ذخیره‌سازی
 
-- [ ] اضافه‌کردن ذخیره‌سازی محلی و پایدار
+- [x] اضافه‌کردن ذخیره‌سازی محلی و پایدار
 - [ ] پیاده‌سازی encrypted storage برای اطلاعات حساس
 - [ ] اضافه‌کردن Face ID / Fingerprint / Passcode (در صورت پشتیبانی پلتفرم)
 - [ ] ساخت Secure Memory Vault
@@ -107,45 +111,33 @@
 - [ ] انتشار نسخه‌ی beta
 - [ ] برنامه‌ریزی برای نسخه‌ی 1.0
 
-## 5. جزئیات فنی پیشنهادی
+## 5. جزئیات فنی فعلی
 
 ### Frontend
 
 - React Native + Expo
 - TypeScript
 - React Navigation
-- Reanimated + Gesture Handler
-- Expo Router یا React Navigation
+- Expo Vector Icons
+- Linear Gradient برای UI لوکس
 
 ### State Management
 
-- Zustand یا Redux Toolkit
-- Query layer برای داده‌های ابری
+- Zustand برای state محلی
+- AsyncStorage برای persistence ساده
 
 ### Data Storage
 
-- SQLite برای داده‌های محلی
-- SecureStore برای secrets و تنظیمات حساس
-- File system برای media
-
-### Sync & Backend
-
-- Supabase برای auth + DB + storage + sync
-- یا Firebase برای سریع‌العمل‌کرد در MVP
-
-### Analytics & Monitoring
-
-- Sentry
-- PostHog یا Firebase Analytics
-- Crashlytics
+- storage abstraction برای JSON-based persistence
+- آماده برای ارتقا به SQLite / SecureStore
 
 ## 6. پیشنهادهای بهبود پروژه
 
 ### تجربه‌ی کاربری
 
-- اضافه‌کردن onboarding خیلی ظریف و احساسی
-- ساخت حالت‌های مختلف برای فواصل زمانی (مثلاً 1 ماه، 1 سال، 5 سال)
-- شخصی‌سازی متن‌های reflectives بر اساس نوع رابطه و سبک کاربر
+- اضافه‌کردن onboarding ظریف و احساسی
+- ساخت حالت‌های مختلف برای فواصل زمانی
+- شخصی‌سازی متن‌های reflective بر اساس نوع رابطه و سبک کاربر
 - افزودن حالت‌های calming و ambient برای کاهش حس غم‌انگیز بودن UI
 
 ### طراحی
@@ -181,12 +173,12 @@
 
 ## 8. کارهای فوری بعدی
 
-1. ساخت دیتابیس محلی و مدل داده‌ها
-2. طراحی صفحه‌ی journal و form entry
-3. اضافه‌کردن navigation و screen‌های اصلی
-4. ایجاد theme system و reusable components
-5. اتصال داده‌های زمان و analytics به UI
+1. ارتقای مدل داده‌ی journal با tags، weather، location
+2. افزودن ویرایش و حذف entry‌ها
+3. اضافه‌کردن media support برای عکس/صدا
+4. ساخت onboarding و تنظیمات کاربر
+5. آماده‌سازی نسخه‌ی MVP برای تست اولیه
 
 ## 9. جمع‌بندی
 
-این پروژه در مرحله‌ی اولیه‌ی طراحی و prototype قرار دارد. اگر این مسیر با دقت و ساختاردهی درست ادامه پیدا کند، می‌تواند از یک app صرفاً کاربردی به یک تجربه‌ی احساسی و خاص تبدیل شود که در ذهن کاربر ماندگار بماند.
+این پروژه از مرحله‌ی prototype به سمت یک اپلیکیشن قابل‌استفاده و قابل‌اتکا پیش رفته است. با ادامه‌ی این مسیر، می‌توان آن را به یک تجربه‌ی احساسی، شخصی و ماندگار تبدیل کرد که هم از نظر محصول و هم از نظر معماری آماده‌ی رشد است.

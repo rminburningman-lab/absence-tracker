@@ -1,10 +1,12 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Animated, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { AppHeader } from '../components/ui/AppHeader';
 import { Card } from '../components/ui/Card';
 import { Chip } from '../components/ui/Chip';
 import { EmptyState } from '../components/ui/EmptyState';
 import { MetricTile } from '../components/ui/MetricTile';
+import { ScreenContainer } from '../components/ui/ScreenContainer';
 import { SectionHeader } from '../components/ui/SectionHeader';
 import { colors, radius, spacing, typography } from '../theme';
 import { formatNumber, getElapsedParts } from '../utils/date';
@@ -49,13 +51,13 @@ export function HomeScreen() {
   const seasons = ['Spring', 'Summer', 'Autumn', 'Winter'];
 
   return (
-    <LinearGradient colors={['#060816', '#101830', '#1d2748']} style={styles.background}>
+    <ScreenContainer style={styles.screen}>
+      <AppHeader
+        title="Memory Timeline"
+        subtitle="A quiet museum of the days that kept passing."
+        right={<View style={styles.headerBadge}><Text style={styles.headerBadgeText}>Live</Text></View>}
+      />
       <ScrollView contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <Text style={styles.eyebrow}>Memory Timeline / Absence Tracker</Text>
-          <Text style={styles.title}>A quiet museum of the days that kept passing.</Text>
-        </View>
-
         <Animated.View
           style={[
             styles.heroCard,
@@ -142,35 +144,33 @@ export function HomeScreen() {
           </View>
         </Card>
       </ScrollView>
-    </LinearGradient>
+    </ScreenContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  background: {
-    flex: 1,
+  screen: {
+    paddingTop: 0,
   },
   container: {
     paddingHorizontal: spacing.lg,
-    paddingTop: 56,
+    paddingTop: spacing.md,
     paddingBottom: 40,
   },
-  header: {
-    marginBottom: 18,
+  headerBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 999,
+    backgroundColor: 'rgba(94, 234, 212, 0.16)',
+    borderWidth: 1,
+    borderColor: 'rgba(94, 234, 212, 0.28)',
   },
-  eyebrow: {
+  headerBadgeText: {
     color: colors.accent,
-    fontSize: 12,
-    letterSpacing: 2.2,
+    fontSize: 11,
+    fontWeight: '700',
     textTransform: 'uppercase',
-    marginBottom: 8,
-    fontWeight: '600',
-  },
-  title: {
-    color: colors.textPrimary,
-    fontSize: typography.title,
-    lineHeight: 34,
-    fontWeight: '600',
+    letterSpacing: 1.1,
   },
   heroCard: {
     borderRadius: radius.xl,
